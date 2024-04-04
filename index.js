@@ -22,6 +22,12 @@ app.get("/info", (req, res) => {
   res.render("info.ejs", { name, cel, persEmail, workEmail });
 });
 
+app.get("/sub/:subpage", (req, res) => {
+  const subName = req.params.subpage;
+  const randNum = Math.floor(Math.random(10));
+  res.render("subpage", { subName, randNum });
+});
+
 app.listen(3000, () => {
   console.log("-- Listening on port 3000 --");
 });
