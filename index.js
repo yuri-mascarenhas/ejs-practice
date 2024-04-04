@@ -24,7 +24,7 @@ app.get("/info", (req, res) => {
 
 app.get("/sub/:subpage", (req, res) => {
   const subName = req.params.subpage;
-  const randNum = Math.floor(Math.random(10));
+  const randNum = Math.floor(Math.random() * 10);
   res.render("subpage", { subName, randNum });
 });
 
