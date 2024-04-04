@@ -7,7 +7,12 @@
   </head>
   <body>
     <h1>Welcome to the <%= subName %> subpage</h1>
-
+    <% if (subName === "random"){ %>
+    <p><b>Your number is <%= randNum %></b></p>
+    <p>it's an <%= randNum % 2 === 0 ? "EVEN" : "ODD" %> number</p>
+    <%} else {%>
+    <p><b>Nothing</b> to see here</p>
+    <% } %>
     <footer><a href="/">Home</a></footer>
     <footer><a href="/info">Info</a></footer>
   </body>
