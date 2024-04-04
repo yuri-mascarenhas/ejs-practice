@@ -15,7 +15,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/info", (req, res) => {
-  res.render("info.ejs");
+  const name = "Yuri Santos Mascarenhas";
+  const cel = "+55 99 000-000-000";
+  const persEmail = "yurism@id.uff.br";
+  const workEmail = "yuri.mascarenhas@btgpactual.com";
+  res.render("info.ejs", { name, cel, persEmail, workEmail });
 });
 
 app.listen(3000, () => {
