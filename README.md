@@ -5,6 +5,7 @@ This project is a simple practice for templating pages using the [EJS](https://e
 ## Important to remember
 
 - EJS will look at the _views_ page, in the _cwd_ by default
+- When using syntax interpolation, avoid, whenever possible, the use of logic in the .ejs file
 - When using the _import_ syntax over the _require_ you have to extract the directory name "by hand":
 
 ```python
