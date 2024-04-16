@@ -1,0 +1,30 @@
+{
+  "art1": {
+    "title": "qvasimodo",
+    "date": "20/03/2023",
+    "sales": [
+      {
+        "date": "12/04/2024",
+        "price": 2000,
+        "buyer": "anon"
+      }
+    ]
+  },
+  "art2": {
+    "title": "evolução agressiva",
+    "date": "17/06/2023",
+    "sales": []
+  },
+  "music1": {
+    "title": "prelúdio para",
+    "genre": ["shoegaze", "nu-metal", "metalcore"],
+    "duration": 96,
+    "price": 0.99
+  },
+  "music2": {
+    "title": "autopreservação",
+    "genre": ["hardcore", "deathcore", "metalcore", "black-metal", "nu-metal"],
+    "duration": 121,
+    "price": 0.99
+  }
+}
