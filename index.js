@@ -28,6 +28,11 @@ app.get("/sub/:subpage", (req, res) => {
   res.render("subpage", { subName, randNum });
 });
 
+app.get("/gallery", (req, res) => {
+  const gallery = ["art1", "art2", "music1", "art3", "music2", "music3"];
+  res.render("gallery.ejs", { gallery });
+});
+
 app.listen(3000, () => {
   console.log("-- Listening on port 3000 --");
 });
