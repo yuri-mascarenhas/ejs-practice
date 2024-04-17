@@ -7,9 +7,45 @@
   </head>
   <body>
     <h1>Gallery Exhibition</h1>
+    <h2><%=section%> Section</h2>
     <ul>
       <% for (let work of gallery) {%>
-      <li><%= work %></li>
+      <li>
+        <%= work.title %> <%if (section === "Music") {%>
+        <ul>
+          <li>
+            <b>Genre(s):</b>
+            <ul>
+              <%for (let genre of work.genres) {%>
+              <li><%=genre%></li>
+              <%}%>
+            </ul>
+          </li>
+          <li><b>Duration:</b> <%=work.duration%> seconds</li>
+          <li><b>Price:</b> US$<%=work.price%></li>
+        </ul>
+        <%} else {%>
+        <ul>
+          <li><b>Date: </b><%=work.date%></li>
+          <li>
+            <b>Sale History: </b>
+            <%if (work.sales.length === 0){%>
+            <i>None</i>
+            <%} else {%>
+            <ol>
+              <%for (let sale of work.sales){%>
+              <li>
+                <p><b>Date:</b> <%=sale.date%></p>
+                <p><b>Price:</b> US$<%=sale.price%></p>
+                <p><b>Buyer:</b> <%=sale.buyer%></p>
+              </li>
+              <%}%>
+            </ol>
+            <%}%>
+          </li>
+        </ul>
+        <%}%>
+      </li>
       <% } %>
     </ul>
     <footer><a href="/">Home</a></footer>

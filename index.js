@@ -1,6 +1,8 @@
 import express from "express";
 import { fileURLToPath } from "url";
 import * as path from "path";
+import capitalize from "./utils.js";
+import galleryData from "./data.json" assert { type: "json" };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,9 +30,15 @@ app.get("/sub/:subpage", (req, res) => {
   res.render("subpage", { subName, randNum });
 });
 
-app.get("/gallery", (req, res) => {
-  const gallery = ["art1", "art2", "music1", "art3", "music2", "music3"];
-  res.render("gallery.ejs", { gallery });
+app.get("/gallery/:section", (req, res) => {
+  const { section } = req.params;
+  const exhibitData = Object.keys(galleryData)
+    .filter((key) => key.includes(section))
+    .map((key) => galleryData[key]);
+  res.render("gallery.ejs", {
+    gallery: exhibitData,
+    section: capitalize(section),
+  });
 });
 
 app.listen(3000, () => {
