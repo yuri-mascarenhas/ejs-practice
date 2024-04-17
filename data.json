@@ -17,13 +17,13 @@
   },
   "music1": {
     "title": "prelúdio para",
-    "genre": ["shoegaze", "nu-metal", "metalcore"],
+    "genres": ["shoegaze", "nu-metal", "metalcore"],
     "duration": 96,
     "price": 0.99
   },
   "music2": {
     "title": "autopreservação",
-    "genre": ["hardcore", "deathcore", "metalcore", "black-metal", "nu-metal"],
+    "genres": ["hardcore", "deathcore", "metalcore", "black-metal", "nu-metal"],
     "duration": 121,
     "price": 0.99
   }
